@@ -1,0 +1,291 @@
+.container {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.logo-row {
+    margin: 3rem 0 2rem;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.3rem;
+}
+
+.info-wrapper {
+    width: 45%;
+}
+
+.image-wrapper {
+    width: 60%;
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-row {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-p {
+    color: #5ca7eb;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: -6px;
+}
+
+h1 {
+    color: #343434;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+h1 b {
+    color: #5ca7eb;
+}
+
+.infomation-p {
+    color: #343434;
+    font-size: 18px;
+    font-family: sans-serif;
+    line-height: 24px;
+    margin-top: 4px;
+}
+
+.kidsImg {
+    width: 75%;
+}
+
+.start_btn {
+    height: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    align-self: flex-start;
+    background-color: #5ca7eb;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    transition: .3s;
+}
+
+.start_btn:hover {
+    background-color: #3a8cd8;
+    transform: translateY(2px);
+}
+
+@media (max-width: 1600px) {
+
+    .image-wrapper {
+        display: flex;
+    }
+
+    .welcome-p {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .infomation-p {
+        font-size: 16px;
+    }
+
+    .start_btn {
+        font-size: 18px;
+        padding: 0.6rem 2rem;
+        margin-top: 1rem;
+    }
+
+    .kidsImg {
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1366px) {
+
+    .welcome-p {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .infomation-p {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .start_btn {
+        font-size: 18px;
+        padding: 0.6rem 2rem;
+        margin-top: 1rem;
+    }
+
+    .kidsImg {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .info-wrapper {
+        width: 50%;
+    }
+    
+    .image-wrapper {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .logo-row {
+        margin: 0rem 0 2rem;
+    }
+
+    .mainContent {
+        flex-direction: column;
+        justify-content: initial;
+    }
+
+    .info-wrapper, .image-wrapper {
+        width: 100%;
+    }
+
+    .kidsImg {
+        width: 50%;
+    }
+
+    .start_btn {
+        margin: 2rem auto 0;
+    }
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .infomation-p {
+        font-size: 14px;
+    }
+
+    .start_btn {
+        font-size: 16px;
+        padding: 0.6rem 1.5rem;
+        margin: 1rem auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .infomation-p {
+        font-size: 13px;
+    }
+
+    .kidsImg {
+        width: 72%;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .welcome-p {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .infomation-p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+.modal {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 50px 10px;
+    transition: .2s;
+}
+
+.modal.active {
+    position: fixed;
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: .4s;
+}
+
+.modal_content {
+    display: flex;
+    top: 10%;
+    padding: 20px;
+    position: relative;
+    background: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px black;
+}
+
+@media (max-width: 1366px) {
+
+    .modal_content {
+        max-width: 800px;
+    }
+
+    .modal_content img {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .modal_content {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .modal_content {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal_content {
+        top: 25%;
+    }
+}
